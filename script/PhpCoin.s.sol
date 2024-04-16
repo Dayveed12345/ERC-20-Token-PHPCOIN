@@ -5,9 +5,11 @@ import {PhpCoin} from "../src/PhpCoin.sol";
 
 contract PhpScript is Script{
     PhpCoin internal phpcoin;
-    function run() public {
+    function run() public returns(bool){
         vm.startBroadcast();
         phpcoin= new PhpCoin();
         vm.stopBroadcast();
+          return true ;
         }
-}
+      
+    }
